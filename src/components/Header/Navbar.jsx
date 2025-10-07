@@ -1,8 +1,24 @@
 import React from 'react';
 import logo_img from '../../assets/logo.png'
 import { Link } from 'react-router';
+import { BsGithub } from "react-icons/bs";
+
 
 const Navbar = () => {
+    const links = (
+      <>
+        <Link to="/">
+          <li className="m-2">Home</li>
+        </Link>
+        <Link to="/apps">
+          <li className="m-2">Apps</li>
+        </Link>
+        <Link to="/installation">
+          <li className="m-2">Installation</li>
+        </Link>
+      </>
+    );
+
     return (
       <div className="navbar bg-base-100 shadow-sm">
         <div className="navbar-start">
@@ -28,29 +44,10 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a>Item 3</a>
-              </li>
+              {links}
             </ul>
           </div>
-          <Link
-            to="/"
-            className="btn btn-ghost text-lg flex items-center gap-2"
-          >
+          <Link to="/" className=" text-lg flex items-center gap-2">
             <img className="w-[30px]" src={logo_img} alt="" />
             <span className="bg-gradient-to-br from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent font-bold ">
               HERO.IO
@@ -58,30 +55,17 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <details>
-                <summary>Parent</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
-          </ul>
+          <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <Link to="/https://github.com/maimuna03134">
+            <button className="btn bg-gradient-to-br from-[#632EE3] to-[#9F62F2]   font-bold text-white">
+              <span>
+                <BsGithub />
+              </span>
+              Contribute
+            </button>
+          </Link>
         </div>
       </div>
     );
