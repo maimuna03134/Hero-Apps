@@ -9,9 +9,9 @@ const AppCard = ({ app }) => {
 
     return (
       <Link to={`/app/${id}`}>
-        <div className=" card bg-white  shadow-sm ">
+        <div className="card  bg-white  rounded-none shadow-sm h-[400px]">
           <figure className="p-3 overflow-hidden">
-            <img className="w-full   object-cover" src={image} alt={title} />
+            <img className="w-full h-50 rounded object-cover" src={image} alt={title} />
           </figure>
           <div className="card-body">
             <h2 className="card-title text-base ">

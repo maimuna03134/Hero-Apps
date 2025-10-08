@@ -41,7 +41,7 @@ const Navbar = () => {
     );
 
     return (
-      <div className=" bg-white shadow-sm relative z-10  w-screen">
+      <div className=" bg-white shadow-sm relative z-10  w-full">
         <Container>
           <div className="navbar ">
             <div className="navbar-start">
@@ -69,7 +69,7 @@ const Navbar = () => {
                 </div>
                 <ul
                   tabIndex={0}
-                  className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                  className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-center"
                 >
                   {links}
                 </ul>
@@ -85,7 +85,12 @@ const Navbar = () => {
               <ul className="menu menu-horizontal px-1">{links}</ul>
             </div>
             <div className="navbar-end">
-              <a href="https://github.com/maimuna03134">
+              <a
+                href="https://github.com/maimuna03134"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open GitHub profile in new tab"
+              >
                 <button className="btn bg-gradient-to-br from-[#632EE3] to-[#9F62F2]   font-bold text-white">
                   <span>
                     <BsGithub />

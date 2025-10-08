@@ -4,11 +4,31 @@ import useApps from '../../hooks/useApps';
 import AppCard from '../../components/AppCard/AppCard';
 import Container from '../../components/Container/Container';
 import { Link } from 'react-router';
+import ErrorApps from '../ErrorApps/ErrorApps';
+import ErrorPage from '../ErrorPage/ErrorPage';
+import Loader from '../../components/Loader/Loader';
 
 const Home = () => {
     const { apps, loading, error } = useApps();
     const featuredApps = apps.slice(0, 8);
 
+
+    if (error) {
+      return <ErrorPage></ErrorPage>;
+    }
+
+    if (loading) {
+        return (
+            <div>
+                <Loader></Loader>
+            </div>
+        )
+    }
+
+    if (!loading && apps.length===0) {
+        return <ErrorApps></ErrorApps>
+    }
+    
 
     return (
       <div>
@@ -26,11 +46,14 @@ const Home = () => {
                 Explore All Trending Apps on the Market developed by us
               </p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
-              {featuredApps.map((app) => (
-                <AppCard key={app.id} app={app}></AppCard>
-              ))}
-            </div>
+            
+              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
+                {featuredApps.map((app) => (
+                  <AppCard key={app.id} app={app}></AppCard>
+                ))}
+              </div>
+          
+
             <div className="mt-8 flex justify-center">
               <Link
                 className="btn btn-outline bg-gradient-to-br from-[#632EE3] to-[#9F62F2] text-white font-bold"
