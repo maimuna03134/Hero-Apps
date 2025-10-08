@@ -1,13 +1,14 @@
 import React from 'react';
 import { LuDownload } from "react-icons/lu";
 import { IoStar } from "react-icons/io5";
+import { Link } from 'react-router';
 
 
 const AppCard = ({ app }) => {
-    const { image, title, shortDescription, downloads, ratingAvg } = app || {};
+    const { image, title, shortDescription, downloads, ratingAvg , id} = app || {};
 
     return (
-
+      <Link to={`/app/${id}`}>
         <div className=" card bg-white  shadow-sm ">
           <figure className="p-3 overflow-hidden">
             <img className="w-full   object-cover" src={image} alt={title} />
@@ -29,6 +30,7 @@ const AppCard = ({ app }) => {
             </div>
           </div>
         </div>
+      </Link>
     );
 };
 

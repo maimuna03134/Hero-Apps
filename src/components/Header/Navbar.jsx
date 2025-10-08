@@ -1,22 +1,42 @@
 import React from 'react';
+import './Navbar.css'
 import logo_img from '../../assets/logo.png'
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import { BsGithub } from "react-icons/bs";
 import Container from '../Container/Container';
+import Home from '../../pages/Home/Home';
+import Apps from '../../pages/Apps/Apps';
+import Installations from '../../pages/Installations/Installations';
 
 
 const Navbar = () => {
+
     const links = (
       <>
-        <Link to="/">
-          <li className="m-2">Home</li>
-        </Link>
-        <Link to="/apps">
-          <li className="m-2">Apps</li>
-        </Link>
-        <Link to="/installation">
-          <li className="m-2">Installation</li>
-        </Link>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            `m-2 pb-1 ${isActive ? "border-gradient" : ""}`
+          }
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to="/apps"
+          className={({ isActive }) =>
+            `m-2 pb-1 ${isActive ? "border-gradient" : ""}`
+          }
+        >
+          Apps
+        </NavLink>
+        <NavLink
+          to="/installation"
+          className={({ isActive }) =>
+            `m-2 pb-1 ${isActive ? "border-gradient" : ""}`
+          }
+        >
+          Installation
+        </NavLink>
       </>
     );
 
@@ -54,12 +74,12 @@ const Navbar = () => {
                   {links}
                 </ul>
               </div>
-              <Link to="/" className=" text-lg flex items-center gap-2">
+              <NavLink to="/" className=" text-lg flex items-center gap-2">
                 <img className="w-[25px]" src={logo_img} alt="" />
                 <span className="bg-gradient-to-br from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent font-bold ">
                   HERO.IO
                 </span>
-              </Link>
+              </NavLink>
             </div>
             <div className="navbar-center hidden lg:flex">
               <ul className="menu menu-horizontal px-1">{links}</ul>
