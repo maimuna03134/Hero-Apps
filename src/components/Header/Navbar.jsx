@@ -21,7 +21,7 @@ const Navbar = () => {
     );
 
     return (
-      <div className=" bg-white shadow-sm ">
+      <div className=" bg-white shadow-sm relative z-10  w-screen">
         <Container>
           <div className="navbar ">
             <div className="navbar-start">
@@ -55,7 +55,7 @@ const Navbar = () => {
                 </ul>
               </div>
               <Link to="/" className=" text-lg flex items-center gap-2">
-                <img className="w-[30px]" src={logo_img} alt="" />
+                <img className="w-[25px]" src={logo_img} alt="" />
                 <span className="bg-gradient-to-br from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent font-bold ">
                   HERO.IO
                 </span>

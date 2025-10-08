@@ -1,0 +1,306 @@
+[
+  {
+    "id": 1,
+    "title": "FocusMaster",
+    "shortDescription": "Focus for Productivity",
+    "companyName": "AlphaTech",
+    "image": "https://i.ibb.co.com/T9DsBhf/2-UG9ud-O32o1wyxj1b-OG208kr-EZ66v47y-E-d-Nqi-UOp-HNSWA9bcpi-EId37a-Zh-R6jq4-BQ.png",
+    "description": "This focus app takes the proven Pomodoro technique and makes it even more practical for modern lifestyles. Instead of just setting a timer, it builds a complete environment for deep work, minimizing distractions and maximizing concentration...",
+    "size": 45,
+    "reviews": 1200,
+    "ratingAvg": 4.8,
+    "downloads": "5M",
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 600 }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "FitTrack Pro",
+    "shortDescription": "Health & Fitness Tracker",
+    "companyName": "HealthHub",
+    "image": "https://i.ibb.co.com/ZzRdwq50/8e270a27e139387f6f21bf6aab9743f5-icon.png",
+    "description": "FitTrack Pro is designed to help you take control of your health and fitness in a way that fits seamlessly into your busy life. The app goes beyond basic step counting and calorie tracking by providing personalized workout plans...",
+    "size": 38,
+    "reviews": 950,
+    "ratingAvg": 4.6,
+    "downloads": "3.5M",
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 25 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 435 }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "PhotoSnap",
+    "shortDescription": "Photo Editing & Sharing",
+    "companyName": "PixelWorks",
+    "image": "https://i.ibb.co.com/QjvSNJ55/apps-34739-9007199266439288-0c87fc12-305d-4ba9-a61b-92b53924c7ef.png",
+    "description": "PhotoSnap is the ultimate photography companion for enthusiasts and professionals alike. The app allows you to capture, edit, and share photos with ease, providing advanced editing tools, filters, and real-time effects...",
+    "size": 60,
+    "reviews": 2200,
+    "ratingAvg": 4.7,
+    "downloads": "8M",
+    "ratings": [
+      { "name": "1 star", "count": 60 },
+      { "name": "2 star", "count": 50 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 700 },
+      { "name": "5 star", "count": 1190 }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "BudgetBuddy",
+    "shortDescription": "Personal Finance Manager",
+    "companyName": "FinTrack",
+    "image": "https://i.ibb.co.com/ksLGGDzW/GPFn-5dr-A7-Mp-Eu2-Yuju-OGj3c-Um-Hk-RV9jl-Q-MCh2dluli0-Lh-Ge-Tgg-Hu9bad-F6h-Mcg.png",
+    "description": "BudgetBuddy makes personal finance management simple and effective. Users can track expenses, categorize transactions, and set monthly budgets that adapt to their lifestyle...",
+    "size": 25,
+    "reviews": 800,
+    "ratingAvg": 4.5,
+    "downloads": "2M",
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 35 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 250 },
+      { "name": "5 star", "count": 335 }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "MindNotes",
+    "shortDescription": "Notes & Task Organizer",
+    "companyName": "BrainWave",
+    "image": "https://i.ibb.co.com/1Y1sVGyL/F7-Soi-Ym5-N-op-GNn9b-NSG9lu-Ha-Cj6-Du-FU5-BUJk0-ZD1-Inlq4-AI99-XD0-Tg52-Cn7q-Tua-Slf.png",
+    "description": "MindNotes is an all-in-one productivity app that helps you organize your thoughts, tasks, and ideas. It provides flexible note-taking tools, task management boards, and tagging systems to easily categorize and retrieve information...",
+    "size": 32,
+    "reviews": 670,
+    "ratingAvg": 4.6,
+    "downloads": "1.8M",
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 200 },
+      { "name": "5 star", "count": 320 }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "RecipeMaster",
+    "shortDescription": "Cooking & Recipes",
+    "companyName": "Culinary Co.",
+    "image": "https://i.ibb.co.com/k2XdWrCY/recipe-icon-5.png",
+    "description": "RecipeMaster transforms your kitchen experience by providing step-by-step guidance on thousands of recipes from around the world. Users can search by ingredients, cuisine, dietary restrictions, or skill level...",
+    "size": 55,
+    "reviews": 1500,
+    "ratingAvg": 4.7,
+    "downloads": "6M",
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 780 }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "WeatherNow",
+    "shortDescription": "Real-time Weather Updates",
+    "companyName": "SkyTech",
+    "image": "https://i.ibb.co.com/k2XdWrCY/recipe-icon-5.png",
+    "description": "WeatherNow provides accurate and up-to-date weather information at a glance. The app includes real-time temperature, precipitation, wind speed, humidity, and forecast details for your location or any city worldwide...",
+    "size": 20,
+    "reviews": 900,
+    "ratingAvg": 4.5,
+    "downloads": "3M",
+    "ratings": [
+      { "name": "1 star", "count": 35 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 180 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 345 }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "TaskHero",
+    "shortDescription": "Task Management & Productivity",
+    "companyName": "Productive Labs",
+    "image": "https://i.ibb.co.com/k2XdWrCY/recipe-icon-5.png",
+    "description": "TaskHero helps users streamline their daily tasks with a powerful yet simple task management system. Users can create tasks, categorize them into projects, and set deadlines with reminders...",
+    "size": 28,
+    "reviews": 780,
+    "ratingAvg": 4.6,
+    "downloads": "2.5M",
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 25 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 250 },
+      { "name": "5 star", "count": 365 }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "LearnMate",
+    "shortDescription": "Learning & Courses",
+    "companyName": "EduTech",
+    "image": "https://i.ibb.co.com/k2XdWrCY/recipe-icon-5.png",
+    "description": "LearnMate is an interactive learning app designed to help students and lifelong learners acquire knowledge efficiently. Users can browse courses, watch video lectures, complete quizzes, and track their progress...",
+    "size": 35,
+    "reviews": 1020,
+    "ratingAvg": 4.7,
+    "downloads": "4.2M",
+    "ratings": [
+      { "name": "1 star", "count": 25 },
+      { "name": "2 star", "count": 35 },
+      { "name": "3 star", "count": 180 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 380 }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "TravelBuddy",
+    "shortDescription": "Trip Planning & Guides",
+    "companyName": "Wanderlust Inc.",
+    "image": "https://i.ibb.co.com/k2XdWrCY/recipe-icon-5.png",
+    "description": "TravelBuddy is your ultimate companion for planning trips and exploring destinations. Users can discover attractions, find hotels, and view travel guides tailored to their interests...",
+    "size": 50,
+    "reviews": 1100,
+    "ratingAvg": 4.8,
+    "downloads": "6M",
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 430 }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "SleepWell",
+    "shortDescription": "Sleep Tracking & Relaxation",
+    "companyName": "HealthTech",
+    "image": "https://i.ibb.co.com/k2XdWrCY/recipe-icon-5.png",
+    "description": "SleepWell helps users improve sleep quality through personalized routines, guided meditations, and sleep tracking. The app monitors sleep patterns, offering insights into duration, cycles, and disturbances...",
+    "size": 40,
+    "reviews": 900,
+    "ratingAvg": 4.6,
+    "downloads": "3.8M",
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 25 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 405 }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "MusicFlow",
+    "shortDescription": "Music Streaming & Playlists",
+    "companyName": "SoundLab",
+    "image": "https://i.ibb.co.com/k2XdWrCY/recipe-icon-5.png",
+    "description": "MusicFlow is a music streaming app offering curated playlists, personalized recommendations, and high-quality audio playback. Users can explore genres, artists, and moods to discover new music or enjoy their favorites...",
+    "size": 55,
+    "reviews": 1400,
+    "ratingAvg": 4.7,
+    "downloads": "7.5M",
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 630 }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "ShopEasy",
+    "shortDescription": "Online Shopping & Deals",
+    "companyName": "RetailTech",
+    "image": "https://i.ibb.co.com/k2XdWrCY/recipe-icon-5.png",
+    "description": "ShopEasy simplifies online shopping with product discovery, price comparison, and personalized recommendations. Users can browse thousands of products, read reviews, and track deals in real-time...",
+    "size": 42,
+    "reviews": 1200,
+    "ratingAvg": 4.6,
+    "downloads": "5M",
+    "ratings": [
+      { "name": "1 star", "count": 35 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 180 },
+      { "name": "4 star", "count": 350 },
+      { "name": "5 star", "count": 595 }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "NewsPulse",
+    "shortDescription": "Personalized News Feed",
+    "companyName": "MediaHub",
+    "image": "https://i.ibb.co.com/k2XdWrCY/recipe-icon-5.png",
+    "description": "NewsPulse delivers curated news content from reliable sources, keeping users informed with personalized feeds. Users can filter topics, save articles, and receive breaking news notifications...",
+    "size": 38,
+    "reviews": 1000,
+    "ratingAvg": 4.5,
+    "downloads": "4.2M",
+    "ratings": [
+      { "name": "1 star", "count": 25 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 320 },
+      { "name": "5 star", "count": 475 }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "LanguageLab",
+    "shortDescription": "Learn New Languages",
+    "companyName": "LinguaTech",
+    "image": "https://i.ibb.co.com/k2XdWrCY/recipe-icon-5.png",
+    "description": "LanguageLab makes learning a new language engaging and efficient. The app provides lessons, quizzes, flashcards, and speaking exercises to help users master vocabulary, grammar, and pronunciation...",
+    "size": 45,
+    "reviews": 850,
+    "ratingAvg": 4.6,
+    "downloads": "3.5M",
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 25 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 250 },
+      { "name": "5 star", "count": 405 }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "MeditateNow",
+    "shortDescription": "Guided Meditation & Mindfulness",
+    "companyName": "ZenLabs",
+    "image": "https://i.ibb.co.com/k2XdWrCY/recipe-icon-5.png",
+    "description": "MeditateNow provides guided meditation, breathing exercises, and mindfulness practices for users seeking mental clarity and relaxation. The app tracks progress and encourages daily practice to reduce stress and improve focus...",
+    "size": 30,
+    "reviews": 900,
+    "ratingAvg": 4.7,
+    "downloads": "4M",
+    "ratings": [
+      { "name": "1 star", "count": 25 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 395 }
+    ]
+  }
+]
