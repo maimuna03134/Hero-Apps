@@ -6,7 +6,6 @@ import errorAppImg from '../../assets/App_Error.png'
 const ErrorApps = () => {
     return (
       <div className="flex flex-col min-h-screen">
-        <Navbar></Navbar>
         <main className=" flex flex-col items-center justify-center flex-grow   p-4">
           <img
             src={errorAppImg}
@@ -17,16 +16,24 @@ const ErrorApps = () => {
             OPPS!! APP NOT FOUND
           </h1>
           <p className="text-lg text-gray-600 mb-6">
-            The App you are requesting is not found on our system. please try another apps.
+            The App you are requesting is not found on our system. please try
+            another apps.
           </p>
-          <a
-            href="/"
-            className="px-5 py-2 bg-gradient-to-br from-[#632EE3] to-[#9F62F2]  rounded-lg font-bold text-white"
-          >
-            Go Back!
-          </a>
+          <div className='flex flex-col md:flex-row gap-3'>
+            <a
+              href="/apps"
+              className="px-5 py-2 bg-gradient-to-br from-[#632EE3] to-[#9F62F2]  rounded-lg font-bold text-white"
+            >
+              Show All Apps
+            </a>
+            <a
+              href="/"
+              className="px-5 py-2 bg-gradient-to-br from-[#632EE3] to-[#9F62F2]  rounded-lg font-bold text-white"
+            >
+              Go Back Home!
+            </a>
+          </div>
         </main>
-        <Footer></Footer>
       </div>
     );
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import useApps from '../../hooks/useApps';
 import { LuDownload } from "react-icons/lu";
@@ -8,18 +8,38 @@ import starImg from '../../assets/icon_ratings.png'
 import reviewImg from '../../assets/icon-review.png'
 import Container from '../../components/Container/Container';
 import RatingChart from '../RatingChart/RatingChart';
+import ErrorPage from '../ErrorPage/ErrorPage';
+import Loader from '../../components/Loader/Loader';
+import ErrorApps from '../ErrorApps/ErrorApps';
 
 const AppDetails = () => {
   const { id } = useParams();
-  const { apps,loading,error } = useApps();
+  const { apps, loading, error } = useApps();
+
+  const [showLoader, setShowLoader] = useState(true);
+  
   const app = apps.find((a) => a.id === Number(id));
 
-  // console.log(typeof id);
-  // console.log(app);
-  // console.log(apps);
-    if (loading) return <p>Loading.......</p>
-    if (error) return <p>Error loading app data</p>
-    if (!app) return <p>App not found</p>
+ useEffect(() => {
+     const timeOut = setTimeout(() => {
+       setShowLoader(false);
+     }, 500);
+ 
+     return () => clearTimeout(timeOut)
+   }, []);
+
+    if (error) {
+      return <ErrorPage></ErrorPage>;
+    }
+
+    if (loading || showLoader) {
+      return <Loader></Loader>;
+    }
+
+    if (!loading && apps.length === 0) {
+      return <ErrorApps></ErrorApps>;
+  }
+  
   const {
     image,
     title,
@@ -33,8 +53,6 @@ const AppDetails = () => {
     description,
   } = app || {};
   return (
-    
-
     <Container>
       <div className="my-16">
         <div className="hero-content flex-col justify-center items-stretch lg:flex-row ">
@@ -50,7 +68,7 @@ const AppDetails = () => {
             </h1>
             <p className="py-2 text-[#627382]">
               Developed by{" "}
-              <span className="bg-gradient-to-br from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent font-semibold">
+              <span className="bg-gradient-to-br from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent font-bold">
                 {companyName}.io
               </span>
             </p>
@@ -85,9 +103,17 @@ const AppDetails = () => {
                 <p className="font-extrabold text-3xl mb-4">{reviews}</p>
               </div>
             </div>
-            <button className="mt-3 w-fit mx-auto lg:mx-0 btn bg-[#00D390] hover:bg-[#00b97b] text-white font-semibold px-6 py-2 rounded-lg">
-              Install Now ({size} MB)
-            </button>
+            <div className="flex flex-col md:flex-row gap-3">
+              <button className="mt-3 w-fit mx-auto lg:mx-0 btn bg-[#00D390] hover:bg-[#00b97b] text-white font-semibold px-6 py-2 rounded-lg">
+                Install Now ({size} MB)
+              </button>
+              <a
+                href="/apps"
+                className="mt-3 w-fit mx-auto lg:mx-0  bg-gradient-to-br from-[#632EE3] to-[#9F62F2]  text-white font-semibold px-6 py-2 rounded-lg"
+              >
+                Show All Apps
+              </a>
+            </div>
           </div>
         </div>
 
@@ -97,8 +123,8 @@ const AppDetails = () => {
           <RatingChart ratings={ratings}></RatingChart>
         </div>
         <div className="border-t-1 border border-gray-300 my-3"></div>
-        <div className='p-3 '>
-          <h3 className='text-xl font-semibold my-4'>Description:</h3>
+        <div className="p-3 ">
+          <h3 className="text-xl font-semibold my-4">Description:</h3>
           <p className="text-[#627382]">{description}</p>
         </div>
       </div>

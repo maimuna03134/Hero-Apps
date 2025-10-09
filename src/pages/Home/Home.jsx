@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Banner from '../../components/Banner/Banner';
 import useApps from '../../hooks/useApps';
 import AppCard from '../../components/AppCard/AppCard';
@@ -9,20 +9,24 @@ import ErrorPage from '../ErrorPage/ErrorPage';
 import Loader from '../../components/Loader/Loader';
 
 const Home = () => {
-    const { apps, loading, error } = useApps();
+  const { apps, loading, error } = useApps();
+  const [showLoader, setShowLoader] = useState(true);
     const featuredApps = apps.slice(0, 8);
 
+  useEffect(() => {
+    const timeOut = setTimeout(() => {
+      setShowLoader(false);
+    }, 500);
+
+    return () => clearTimeout(timeOut)
+  }, []);
 
     if (error) {
       return <ErrorPage></ErrorPage>;
     }
 
-    if (loading) {
-        return (
-            <div>
-                <Loader></Loader>
-            </div>
-        )
+  if (loading || showLoader) {
+      return <Loader></Loader>
     }
 
     if (!loading && apps.length===0) {
