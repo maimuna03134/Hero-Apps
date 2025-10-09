@@ -1,45 +1,58 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
-import useApps from '../../hooks/useApps';
-import { LuDownload } from "react-icons/lu";
-import { IoStar } from "react-icons/io5";
-import downloadImg from '../../assets/icon_downloads.png'
-import starImg from '../../assets/icon_ratings.png'
-import reviewImg from '../../assets/icon-review.png'
-import Container from '../../components/Container/Container';
-import RatingChart from '../RatingChart/RatingChart';
-import ErrorPage from '../ErrorPage/ErrorPage';
-import Loader from '../../components/Loader/Loader';
-import ErrorApps from '../ErrorApps/ErrorApps';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router";
+import useApps from "../../hooks/useApps";
+import downloadImg from "../../assets/icon_downloads.png";
+import starImg from "../../assets/icon_ratings.png";
+import reviewImg from "../../assets/icon-review.png";
+import Container from "../../components/Container/Container";
+import RatingChart from "../RatingChart/RatingChart";
+import ErrorPage from "../ErrorPage/ErrorPage";
+import Loader from "../../components/Loader/Loader";
+import ErrorApps from "../ErrorApps/ErrorApps";
+import { loadInstallApps, installApp } from "../../utility/localStorage";
 
 const AppDetails = () => {
   const { id } = useParams();
   const { apps, loading, error } = useApps();
 
   const [showLoader, setShowLoader] = useState(true);
-  
+
+  const [isInstalled, setIsInstalled] = useState(false);
+
   const app = apps.find((a) => a.id === Number(id));
 
- useEffect(() => {
-     const timeOut = setTimeout(() => {
-       setShowLoader(false);
-     }, 500);
- 
-     return () => clearTimeout(timeOut)
-   }, []);
+  useEffect(() => {
+    const timeOut = setTimeout(() => {
+      setShowLoader(false);
+    }, 500);
 
-    if (error) {
-      return <ErrorPage></ErrorPage>;
-    }
+    return () => clearTimeout(timeOut);
+  }, []);
 
-    if (loading || showLoader) {
-      return <Loader></Loader>;
-    }
+  useEffect(() => {
+    const installed = loadInstallApps().some((a) => a.id === Number(id));
+    setIsInstalled(installed);
+  }, [id]);
 
-    if (!loading && apps.length === 0) {
-      return <ErrorApps></ErrorApps>;
+  // check if app is already installed
+  const handleInstall = () => {
+    installApp(app);
+    // alert(`${app.title} installed successfully!`);
+    setIsInstalled(true);
+  };
+
+  if (error) {
+    return <ErrorPage></ErrorPage>;
   }
-  
+
+  if (loading || showLoader) {
+    return <Loader></Loader>;
+  }
+
+  if (!loading && apps.length === 0) {
+    return <ErrorApps></ErrorApps>;
+  }
+
   const {
     image,
     title,
@@ -52,6 +65,7 @@ const AppDetails = () => {
     ratings,
     description,
   } = app || {};
+
   return (
     <Container>
       <div className="my-16">
@@ -104,8 +118,17 @@ const AppDetails = () => {
               </div>
             </div>
             <div className="flex flex-col md:flex-row gap-3">
-              <button className="mt-3 w-fit mx-auto lg:mx-0 btn bg-[#00D390] hover:bg-[#00b97b] text-white font-semibold px-6 py-2 rounded-lg">
-                Install Now ({size} MB)
+              <button
+                onClick={handleInstall}
+                disabled={isInstalled}
+                className={`mt-3 w-fit mx-auto lg:mx-0  text-white font-semibold px-6 py-2 rounded-lg 
+                  ${
+                    isInstalled
+                      ? "bg-[#00D390] cursor-not-allowed scale-100 opacity-90"
+                      : "bg-[#00D390] hover:bg-[#00b97b]"
+                  }  `}
+              >
+                {isInstalled ? "Installed" : `Install Now (${size} MB)`}
               </button>
               <a
                 href="/apps"
