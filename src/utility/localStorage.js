@@ -48,10 +48,9 @@ export const unInstallApp = (id) => {
   try {
     const updatedApps = installedApps.filter((a) => a.id !== id);
       localStorage.setItem("installedApps", JSON.stringify(updatedApps));
-      
     Swal.fire({
       toast: true,
-      position: "top-end",
+      position: "top-center",
       icon: "success",
       title: "App uninstalled successfully ☺️!",
       showConfirmButton: false,
