@@ -79,16 +79,16 @@ const Installations = () => {
             </p>
           </div>
 
-          <div className="flex flex-col gap-4">
-            <div className="flex justify-between items-center ">
-              <p className="text-lg font-semibold ">
+          <div className="flex flex-col gap-4 p-4 lg:p-0">
+            <div className="flex justify-between items-center px-3  lg:px-0">
+              <p className="text-lg  font-semibold ">
                 {installedApps.length} Apps Found
               </p>
               <div className="dropdown dropdown-start">
                 <div
                   tabIndex={0}
                   role="button"
-                  className="btn m-1 flex justify-center gap-3 text-gray-600 border-gray-300"
+                  className="btn md:mr-3 m-1 flex justify-center gap-3 text-gray-600 border-gray-300"
                 >
                   Sort by : <IoIosArrowDown className="text-lg" />
                 </div>
