@@ -1,4 +1,4 @@
-# 🌟 Heo Apps
+# 🌟 Heo Apps.io
 
 ### A Modern, Responsive, and Interactive App Showcase Platform built with React.js, Tailwind CSS & DaisyUI
 
@@ -51,5 +51,6 @@ Clean file structure and modular React design.
 👩‍💻 Author
 
 Developed by: Raikatun Naim Maimuna
+
 📧 Email: maimuna84333@gmail.com
 
