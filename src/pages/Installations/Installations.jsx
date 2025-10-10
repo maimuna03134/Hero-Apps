@@ -36,9 +36,11 @@ const Installations = () => {
   if (showLoader) return <Loader></Loader>;
   if (!showLoader && installedApps.length === 0) {
     return (
-      <Container>
+      <div className="min-h-screen flex justify-center items-center">
         <h2 className="text-center text-2xl font-bold mt-10">No Installed Apps Yet!</h2>
-      </Container>
+      </div>
+        
+      
     );
   }
 
@@ -79,7 +81,7 @@ const Installations = () => {
 
           <div className="flex flex-col gap-4">
             <div className="flex justify-between items-center ">
-              <p className="text-gray-500 ">
+              <p className="text-lg font-semibold ">
                 {installedApps.length} Apps Found
               </p>
               <div className="dropdown dropdown-start">
@@ -124,13 +126,13 @@ const Installations = () => {
             {sortedApps.map((app) => (
               <div
                 key={app.id}
-                className="flex justify-between items-center bg-white rounded-lg shadow-sm border border-gray-100 p-4 hover:shadow-md transition-all"
+                className="flex justify-between items-center bg-white rounded-lg shadow-sm border border-gray-100 py-3 px-4 hover:shadow-md transition-all"
               >
                 <div className="flex items-center gap-4">
                   <img
                     src={app.image}
                     alt={app.title}
-                    className="w-16 h-16 object-cover rounded-md bg-gray-100"
+                    className="w-16 h-16 object-cover rounded-md "
                   />
                   <div>
                     <h2 className="font-semibold text-lg text-[#001931]">

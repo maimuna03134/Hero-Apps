@@ -37,7 +37,6 @@ const AppDetails = () => {
   // check if app is already installed
   const handleInstall = () => {
     installApp(app);
-    // alert(`${app.title} installed successfully!`);
     setIsInstalled(true);
   };
 
@@ -49,7 +48,7 @@ const AppDetails = () => {
     return <Loader></Loader>;
   }
 
-  if (!loading && apps.length === 0) {
+  if (!app) {
     return <ErrorApps></ErrorApps>;
   }
 
@@ -69,18 +68,19 @@ const AppDetails = () => {
   return (
     <Container>
       <div className="my-16">
-        <div className="hero-content flex-col justify-center items-stretch lg:flex-row ">
-          <div className="flex justify-center lg:w-1/3">
+        <div className="hero-content flex-col justify-center lg:flex-row gap-x-20">
+          <div className="flex-shrink-0 flex justify-center w-[200px] h-[200px]">
             <img
               src={image}
-              className="w-[200px] h-[200px] object-cover rounded-xl shadow-lg"
+              className="w-full h-full object-contain rounded-xl shadow-lg "
             />
           </div>
-          <div className="flex flex-col justify-between lg:w-2/3 text-center lg:text-left">
-            <h1 className="text-3xl font-bold leading-snug">
+          {/* app details */}
+          <div className="flex flex-col justify-between flex-1 text-center lg:text-left">
+            <h1 className="text-2xl text-blue-950/90 font-bold mb-1">
               {title}:{shortDescription}
             </h1>
-            <p className="py-2 text-[#627382]">
+            <p className=" text-[#627382]">
               Developed by{" "}
               <span className="bg-gradient-to-br from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent font-bold">
                 {companyName}.io
@@ -91,30 +91,30 @@ const AppDetails = () => {
             <div className="grid grid-cols-3 gap-5 text-center lg:text-left">
               <div>
                 <img
-                  className="w-[25px] mx-auto lg:mx-0"
+                  className="w-6 md:mx-0 mx-auto lg:mx-0"
                   src={downloadImg}
                   alt=""
                 />
                 <p className="text-sm text-gray-600 my-1">Downloads</p>
-                <p className="font-extrabold text-3xl mb-4">{downloads}</p>
+                <p className="font-bold text-2xl ">{downloads}</p>
               </div>
               <div>
                 <img
-                  className="w-[25px] mx-auto lg:mx-0"
+                  className="w-6 mx-auto md:mx-0 lg:mx-0"
                   src={starImg}
                   alt=""
                 />
                 <p className="text-sm text-gray-600 my-1">Average Ratings</p>
-                <p className="font-extrabold text-3xl mb-4">{ratingAvg}</p>
+                <p className="font-bold text-2xl ">{ratingAvg}</p>
               </div>
               <div>
                 <img
-                  className="w-[25px] mx-auto lg:mx-0"
+                  className="w-6 mx-auto md:mx-0 lg:mx-0"
                   src={reviewImg}
                   alt=""
                 />
                 <p className="text-sm text-gray-600 my-1">Total Reviews</p>
-                <p className="font-extrabold text-3xl mb-4">{reviews}</p>
+                <p className="font-bold text-3xl">{reviews}</p>
               </div>
             </div>
             <div className="flex flex-col md:flex-row gap-3">
