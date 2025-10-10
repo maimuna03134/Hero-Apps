@@ -8,7 +8,7 @@ const AppCard = ({ app }) => {
     const { image, title, shortDescription, downloads, ratingAvg , id} = app || {};
 
     return (
-      <Link to={`/app/${id}`}>
+      <Link to={`/apps/${id}`}>
         <div className="card  bg-white  rounded-none shadow-sm h-[400px]">
           <figure className="p-3 overflow-hidden">
             <img className="w-full h-50 rounded object-cover" src={image} alt={title} />
@@ -21,7 +21,7 @@ const AppCard = ({ app }) => {
             <div className="card-actions justify-between">
               <div className="badge p-4 bg-[#F1F5E8] text-[#00D390] font-semibold">
                 <LuDownload />
-                {downloads}
+                {downloads} 
               </div>
               <div className="badge p-4 bg-[#FFF0E1] text-[#FF8811] font-semibold">
                 <IoStar />

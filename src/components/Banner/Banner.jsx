@@ -64,19 +64,19 @@ const Banner = () => {
                 Trusted by Millions, Built for You
               </h2>
               <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row justify-center items-center gap-6 sm:gap-8 md:gap-12 lg:gap-16">
-                <div className="flex-1">
+                <div className="flex-1 bg-gradient-to-r from-purple-600 to-green-300 py-5 rounded-md">
                   <p className="text-sm opacity-90">Total Downloads</p>
-                  <h3 className="text-3xl font-bold">29.6M</h3>
+                  <h3 className="text-3xl font-bold my-3">29.6M</h3>
                   <p className="text-sm opacity-90">21% more than last month</p>
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 bg-gradient-to-r from-rose-600 to-fuchsia-200 py-5 rounded-md">
                   <p className="text-sm opacity-90">Total Reviews</p>
-                  <h3 className="text-3xl font-bold">906K</h3>
+                  <h3 className="text-3xl font-bold my-3">906K</h3>
                   <p className="text-sm opacity-90">46% more than last month</p>
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 bg-gradient-to-r from-orange-300 to-purple-560 py-5 rounded-md">
                   <p className="text-sm opacity-90">Active Apps</p>
-                  <h3 className="text-3xl font-bold">132+</h3>
+                  <h3 className="text-3xl font-bold my-3">132+</h3>
                   <p className="text-sm opacity-90">31 more will Launch</p>
                 </div>
               </div>

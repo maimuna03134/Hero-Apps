@@ -1,7 +1,7 @@
 import React from 'react';
 import './Navbar.css'
 import logo_img from '../../assets/logo.png'
-import { Link, NavLink } from 'react-router';
+import { Link, NavLink, useLocation } from 'react-router';
 import { BsGithub } from "react-icons/bs";
 import Container from '../Container/Container';
 import Home from '../../pages/Home/Home';
@@ -10,6 +10,9 @@ import Installations from '../../pages/Installations/Installations';
 
 
 const Navbar = () => {
+  const location = useLocation();
+  const currPath = location.pathname;
+  const isAppsActive = currPath.startsWith('/apps')
 
     const links = (
       <>
@@ -23,8 +26,8 @@ const Navbar = () => {
         </NavLink>
         <NavLink
           to="/apps"
-          className={({ isActive }) =>
-            `m-2 pb-1 ${isActive ? "border-gradient" : ""}`
+          className={
+            `m-2 pb-1 ${isAppsActive ? "border-gradient" : ""}`
           }
         >
           Apps
